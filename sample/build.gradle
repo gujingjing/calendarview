@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.prolificinteractive.materialcalendarview.sample"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode project.ext.versionCodeInt
+        versionName version
+    }
+}
+
+dependencies {
+    // You should use the commented out line below in you're application.
+    // We depend on the source directly here so that development is easier.
+    compile project(':library')
+    //compile 'com.prolificinteractive:material-calendarview:0.7.0'
+
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:recyclerview-v7:22.2.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+}
